@@ -126,51 +126,24 @@
       }
     }
   }
+
+  @media (max-width: $layout_breakpoint_2) {
+    width: 350px;
+  }
+
+  @media (max-width: $layout_breakpoint_3) {
+    width: 80%;
+
+    .title {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      text-transform: capitalize;
+    }
+
+    .grid {
+      grid-template-columns: auto;
+      grid-template-rows: 20px 30px 20px 30px 20px 30px;
+      margin-bottom: 0;
+    }
+  }
 }
-
-// .computer.light {
-//   background-color: $computer_background_light;
-//   h3,
-//   h4,
-//   h5 {
-//     &.offline {
-//       color: $color_offline_light;
-//     }
-//     &.online {
-//       color: $color_online_light;
-//     }
-//   }
-
-//   .title div {
-//     h3 {
-//       margin-right: 11px;
-//       color: $app_color_full_light;
-//     }
-
-//     h4 {
-//       color: $app_color_07_light;
-//     }
-//   }
-
-//   .grid {
-//     h3 {
-//       color: $app_color_07_light;
-//     }
-
-//     h4 {
-//       color: $app_color_06_light;
-//     }
-//   }
-
-//   .power button {
-//     border: 2px solid $wake_button_border_light;
-//     background: $wake_button_background_light;
-//     svg {
-//       stroke: $wake_button_color_light;
-//     }
-//   }
-
-//   div div {
-//     color: $app_color_06_light;
-//   }
-// }

@@ -16,6 +16,18 @@
       padding-top: 10px;
     }
   }
+
+  @media (max-width: $layout_breakpoint_2) {
+    margin: 35px 40px;
+  }
+
+  @media (max-height: $layout_breakpoint_2) {
+    margin: 35px 40px;
+  }
+
+  @media (max-width: $layout_breakpoint_3) {
+    margin: 35px 40px;
+  }
 }
 
 // main#light .description {

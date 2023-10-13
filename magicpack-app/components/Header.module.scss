@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: $layout_breakpoint_2) {
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      margin-bottom: 15px;
+    }
+  }
+}

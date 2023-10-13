@@ -4,6 +4,10 @@ div.pingCheck {
   align-items: center;
   justify-content: space-between;
 
+  @media (max-width: $layout_breakpoint_3) {
+    margin: 15px 0px;
+  }
+
   h3,
   h4,
   h5 {

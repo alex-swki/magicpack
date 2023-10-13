@@ -14,8 +14,16 @@ body {
   align-items: center;
 
   overflow: hidden;
+
+  @media (max-height: $layout_breakpoint_2) {
+    overflow: initial;
+    padding: 50px 0 20px 0;
+  }
 }
 
 main {
-  width: 70vw;
+  width: 75vw;
+  @media (max-width: $layout_breakpoint_1) {
+    width: 90vw;
+  }
 }

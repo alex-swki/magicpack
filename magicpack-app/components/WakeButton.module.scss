@@ -4,6 +4,10 @@ div.power {
   align-items: center;
   justify-content: space-between;
 
+  @media (max-width: $layout_breakpoint_3) {
+    flex-direction: column-reverse;
+  }
+
   h3,
   h4,
   h5 {
@@ -49,33 +53,3 @@ div.power {
     }
   }
 }
-
-// div.power.light {
-//   display: none;
-//   h3,
-//   h4,
-//   h5 {
-//     &.offline {
-//       color: $color_offline_light;
-//     }
-//     &.online {
-//       color: $color_online_light;
-//     }
-//     &.highlatency {
-//       color: $color_latency_light;
-//     }
-//   }
-
-//   button {
-//     border: 2px solid $wake_button_border_light;
-
-//     background: $wake_button_background_light;
-//     svg {
-//       stroke: $footer_color_light;
-//     }
-//   }
-
-//   div div {
-//     color: $app_color_06_light;
-//   }
-// }
