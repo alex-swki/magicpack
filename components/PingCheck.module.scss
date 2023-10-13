@@ -1,0 +1,42 @@
+div.pingCheck {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  h3,
+  h4,
+  h5 {
+    &.offline {
+      color: $color_offline;
+    }
+    &.online {
+      color: $color_online;
+    }
+    &.highlatency {
+      color: $color_latency;
+    }
+  }
+
+  h5,
+  h6 {
+    font-size: 13px;
+  }
+
+  h5 {
+    margin-right: 20px;
+  }
+
+  div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    color: $app_color_06;
+
+    svg {
+      margin-right: 8px;
+    }
+  }
+}

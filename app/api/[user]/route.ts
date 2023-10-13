@@ -19,7 +19,8 @@ export async function GET(request: Request, { params }: { params: { user: string
   if (computerJson[user]) {
     const ping = await pingDNS(computerJson[user]["computer"]["dns"]);
     computerJson[user]["computer"]["isAlive"] = ping["isAlive"];
-    computerJson[user]["computer"]["ms"] = ping["ms"];
+    computerJson[user]["computer"]["ms"] = ping["ms"].split(".")[0];
+    if (computerJson[user]["computer"]["ms"] === "unknown") computerJson[user]["computer"]["ms"] = -1;
     return new Response(JSON.stringify(computerJson[user]));
   }
 

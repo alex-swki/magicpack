@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import styles from "./page.module.scss";
 import Header from "../../components/Header";
@@ -7,6 +7,7 @@ import Description from "../../components/Description";
 import Computer from "../../components/Computer";
 import WakeButton from "../../components/WakeButton";
 import PoweredBy from "../../components/Footer";
+import PingCheck from "../../components/PingCheck";
 
 export default function ({ params }: { params: { user: string } }) {
   const [refreshTrigger, setRefreshTrigger] = useState(0);
@@ -15,12 +16,14 @@ export default function ({ params }: { params: { user: string } }) {
   const [pingMs, setPingMs] = useState(0);
   const [refreshIn, setRefreshIn] = useState(3);
   const [computerData, setComputerData] = useState({
-    location: "",
-    name: "",
-    mac: "",
-    dns: "",
+    location: "undefined",
+    name: "undefined",
+    mac: "undefined",
+    dns: "undefined",
     isAlive: false,
   });
+
+  const hasMounted = useRef(false);
 
   useEffect(() => {
     fetch("/api/" + params.user)
@@ -30,6 +33,7 @@ export default function ({ params }: { params: { user: string } }) {
         setComputerData(data.computer);
         setIsAlive(data.computer.isAlive);
         setPingMs(data.computer.ms);
+        hasMounted.current = true;
       });
   }, []);
 
@@ -45,7 +49,7 @@ export default function ({ params }: { params: { user: string } }) {
     return () => {
       clearInterval(intervalRefreshIn);
     };
-  }, [refreshIn]);
+  }, [hasMounted, refreshIn]);
 
   useEffect(() => {
     fetch("/api/" + params.user)
@@ -56,17 +60,20 @@ export default function ({ params }: { params: { user: string } }) {
       });
   }, [refreshTrigger]);
 
-  return (
-    <main className={styles.main}>
-      <Header username={userName} />
-      <Description />
-      <div className={styles.center_wrap}>
-        <Computer location={computerData.location} name={computerData.name} mac={computerData.mac} dns={computerData.dns} isAlive={isAlive}>
-          <WakeButton mac={computerData.mac} pingms={pingMs} refreshIn={refreshIn} />
-          {/* onClick={clearInterval(intervalIsAlive)} */}
-        </Computer>
-      </div>
-      <PoweredBy />
-    </main>
-  );
+  if (computerData) {
+    return (
+      <main className={styles.main}>
+        <Header username={userName} />
+        <Description />
+        <div className={styles.center_wrap}>
+          <Computer location={computerData.location} name={computerData.name} mac={computerData.mac} dns={computerData.dns} isAlive={isAlive}>
+            <WakeButton mac={computerData.mac}>
+              <PingCheck pingms={pingMs} refreshIn={refreshIn} />
+            </WakeButton>
+          </Computer>
+        </div>
+        <PoweredBy />
+      </main>
+    );
+  }
 }

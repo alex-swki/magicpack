@@ -4,7 +4,8 @@
 
   width: 70vw;
   .divider {
-    background-color: rgba($color: #fff, $alpha: 0.4);
+    border-color: $footer_color;
+    border-width: 2.5px;
     margin-bottom: 30px;
   }
 
@@ -15,11 +16,21 @@
     justify-content: center;
 
     .text {
-      font-weight: 900;
+      font-weight: 700;
       font-size: 14.5px;
-      color: rgba($color: #fff, $alpha: 0.45);
+      color: $footer_color;
 
       margin-right: 15px;
     }
   }
 }
+
+// .footer.light {
+//   .divider {
+//     border-color: $footer_color_light;
+//   }
+
+//   .wrapper .text {
+//     color: $footer_color_light;
+//   }
+// }

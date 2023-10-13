@@ -1,0 +1,28 @@
+.description {
+  text-align: center;
+  margin: 115px 0;
+
+  h1 {
+    font-size: 28px;
+    color: $app_color_full;
+  }
+
+  p {
+    padding: 6px 0;
+    font-size: 18px;
+    color: $description_paragraph_color;
+
+    &:first-of-type {
+      padding-top: 10px;
+    }
+  }
+}
+
+// main#light .description {
+//   h1 {
+//     color: $app_color_full_light;
+//   }
+//   p {
+//     color: $description_paragraph_color_light;
+//   }
+// }
