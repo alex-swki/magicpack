@@ -1,0 +1,25 @@
+.footer {
+  position: absolute;
+  bottom: 45px;
+
+  width: 70vw;
+  .divider {
+    background-color: rgba($color: #fff, $alpha: 0.4);
+    margin-bottom: 30px;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    .text {
+      font-weight: 900;
+      font-size: 14.5px;
+      color: rgba($color: #fff, $alpha: 0.45);
+
+      margin-right: 15px;
+    }
+  }
+}

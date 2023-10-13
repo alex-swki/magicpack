@@ -1,0 +1,21 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #111218;
+  padding: 150px 0 50px 0;
+
+  color: rgba($color: #fff, $alpha: 0.5);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+main {
+  width: 70vw;
+}

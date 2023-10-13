@@ -1,0 +1,21 @@
+{
+  "john-doe": {
+    "name": "John Doe",
+    "computer": {
+      "location": "Main Office",
+      "name": "XY-PC001",
+      "mac": "A1:B2:C3:4D:5E:6F",
+      "dns": "google.de"
+    }
+  },
+
+  "alex-s": {
+    "name": "Alexander Scharkowski",
+    "computer": {
+      "location": "Kesten",
+      "name": "DESKTOP-Q25I60",
+      "mac": "74:56:3C:6D:F5:3F",
+      "dns": "10.101.0.2"
+    }
+  }
+}

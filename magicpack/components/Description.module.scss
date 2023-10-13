@@ -1,0 +1,19 @@
+.description {
+  text-align: center;
+  margin: 115px 0;
+
+  h1 {
+    font-size: 28px;
+    color: #fff;
+  }
+
+  p {
+    padding: 6px 0;
+    font-size: 18px;
+    color: rgba($color: #fff, $alpha: 0.8);
+
+    &:first-of-type {
+      padding-top: 10px;
+    }
+  }
+}
