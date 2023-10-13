@@ -1,0 +1,8 @@
+version: "3.3"
+services:
+  magicpack:
+    ports:
+      - "3000:3000"
+    restart: always
+    container_name: magicpack
+    image: "magicpack:latest"
