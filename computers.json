@@ -5,27 +5,27 @@
       "location": "Main Office",
       "name": "XY-PC001",
       "mac": "A1:B2:C3:4D:5E:6F",
-      "dns": "google.de"
+      "dns": "xy-pc002.google.de"
     }
   },
 
-  "alex-s": {
-    "name": "Alexander Scharkowski",
+  "jane-doe": {
+    "name": "Ruby von Rails",
     "computer": {
-      "location": "Germany",
-      "name": "DESKTOP-Q25I60",
-      "mac": "74:56:3C:6D:F5:3F",
-      "dns": "10.101.0.2"
+      "location": "Room B 2nd floor",
+      "name": "XY-PC002",
+      "mac": "A1:B2:C3:4D:5E:6F",
+      "dns": "xy-pc002.my.domain"
     }
   },
 
-  "uxpc034": {
-    "name": "UXPC034",
+  "jason-response": {
+    "name": "Jason Response",
     "computer": {
-      "location": "Germany",
-      "name": "UXPC034",
-      "mac": "18:A9:05:F2:43:B8",
-      "dns": "uxpc034"
+      "location": "Java Isl.",
+      "name": "XY-PC003",
+      "mac": "A1:B2:C3:4D:5E:6F",
+      "dns": "xy-pc003.my.domain"
     }
   }
 }
