@@ -1,8 +1,7 @@
 FROM node:20-bookworm
-COPY ./.env /app/.env.local
-RUN apt update && apt install git -y
+COPY ./.env /magicpack/.env.local
 WORKDIR /
-RUN git clone https://github.com/alex-swki/magicpack/
+COPY ./magicpack-app /magicpack
 WORKDIR /magicpack
 RUN npm install && npm run build
 ENTRYPOINT npm run start
