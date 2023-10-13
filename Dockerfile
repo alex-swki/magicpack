@@ -1,5 +1,4 @@
 FROM node:20-bookworm
-COPY ./computers.json /magicpack/computers.json
 COPY ./.env /magicpack/.env.local
 WORKDIR /
 COPY ./magicpack-app /magicpack
