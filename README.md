@@ -1,3 +1,4 @@
+
 # MagicPack
 
 MagicPack is a web-based Wake-On-Lan tool intended for use by teams or companies.
@@ -83,3 +84,10 @@ Enter any string you like in here for the 1st paragraph.
 
 _NEXT_PUBLIC_PAGE_DESC2="When your computer is running, you can connect via Remote Desktop."_
 Enter any string you like in here for the 2nd paragraph.
+
+## API
+If you do not want to use the front-end, use the API of my application to wake up your PCs.
+Simply HTTP Post to /api/wake
+Request Body:
+
+    {"mac": "A1:B2:C3:4D:5E:6F"}
