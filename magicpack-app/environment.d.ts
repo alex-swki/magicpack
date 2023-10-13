@@ -1,6 +1,7 @@
 declare global {
   namespace NodeJS {
     interface ProcessEnv {
+      NEXT_PUBLIC_URL: string;
       NEXT_PUBLIC_COLOR_THEME: string;
       NEXT_PUBLIC_COMPANY_LOGO_PATH: string;
       NEXT_PUBLIC_COMPANY_LOGO_WIDTH: number;

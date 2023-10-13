@@ -15,7 +15,7 @@ export default function ({ mac, children }: { mac: string; children: ReactNode }
 
   useEffect(() => {
     // if (isMounted.current) {
-    fetch("http://localhost:3000/api/wake", requestOptions);
+    fetch(process.env.NEXT_PUBLIC_URL + "/api/wake", requestOptions);
     // } else {
     isMounted.current = true;
     // }
