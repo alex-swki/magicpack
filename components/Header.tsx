@@ -5,7 +5,7 @@ import User from "./User";
 export default function ({ username }: { username: string }) {
   return (
     <header className={styles.header}>
-      <Logo imagewidth={240} />
+      <Logo imagewidth={process.env.NEXT_PUBLIC_COMPANY_LOGO_WIDTH} />
       <User name={username} />
     </header>
   );
