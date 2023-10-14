@@ -34,19 +34,12 @@ The computers.json file can be edited both before creating the container or as t
 The file structure requires { } around the actual entries which look like this:
 
     "john-doe": {
-
         "name": "John Doe",
-
         "computer": {
-
     	    "location": "Main Office",
-
     	    "name": "XY-PC001",
-
     	    "mac": "A1:B2:C3:4D:5E:6F",
-
     	    "dns": "xy-pc002.google.de"
-
         }
     }
 
