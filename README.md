@@ -12,6 +12,8 @@ In order to save electricity costs, you can deploy MagicPack and offer your empl
 
 ## Host MagicPack using Docker
 
+In order for the MagicPack docker container to be able to send magic packets in your network the Docker network-mode "host" needs to be working. This is currently only the case on Linux systems.
+
 1. Clone this git repository
 
    git clone https://github.com/alex-swki/magicpack
