@@ -46,11 +46,11 @@ The file structure requires { } around the actual entries which look like this:
 "john-doe" sets the path you need to enter in order to turn on the defined computer.
 => .envURL/john-doe
 => http://localhost:3000/john-doe (if URL in .env == http://localhost:3000)
-"name" is the display name. I suggest you put in the primary user of the defined computer
-"computer.location" is a display name for the location of the computer
-"name" is a display name for the actual computer name
-"mac" is the mac address of the NIC that the magic packet should be sent to. You need to follow this syntax: **A1:B2:C3:4D:5E:6F**
-"dns" is the dns name or ip address of the computer which is used for ping
+"name" is the display name. I suggest you put in the primary user of the defined computer.
+"computer.location" is a display name for the location of the computer.
+"name" is a display name for the actual computer name.
+"mac" is the mac address of the NIC that the magic packet should be sent to. You need to follow this syntax: **A1:B2:C3:4D:5E:6F**.
+"dns" is the dns name or ip address of the computer which is used for ping.
 
 ## .env
 
