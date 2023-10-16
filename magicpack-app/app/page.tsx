@@ -2,7 +2,7 @@
 
 import styles from "./page.module.scss";
 import Image from "next/image";
-import Logo from "../components/Logo";
+import { Logo } from "../components/Logo";
 import PoweredBy from "../components/Footer";
 import React, { useEffect, useState } from "react";
 

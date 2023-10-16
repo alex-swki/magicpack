@@ -2,7 +2,7 @@ import styles from "./WakeButton.module.scss";
 import React, { useState, useEffect, useRef, ReactNode } from "react";
 import { IconPower } from "@tabler/icons-react";
 
-export default function ({ mac, children }: { mac: string; children: ReactNode }) {
+export default function WakeButton({ mac, children }: { mac: string; children: ReactNode }) {
   const [wakeComputerTrigger, setWakeComputerTrigger] = useState(0);
 
   const isMounted = useRef(false);

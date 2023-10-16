@@ -8,7 +8,7 @@ const sourcecodepro = Source_Code_Pro({
   display: "swap",
 });
 
-export default function ({ location, name, mac, dns, isAlive, children }: { location: string; name: string; mac: string; dns: string; isAlive: boolean; children: ReactNode }) {
+export default function Computer({ location, name, mac, dns, isAlive, children }: { location: string; name: string; mac: string; dns: string; isAlive: boolean; children: ReactNode }) {
   return (
     <article className={styles.computer + " " + sourcecodepro.className}>
       <section className={styles.title}>

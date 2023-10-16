@@ -1,6 +1,6 @@
 import styles from "./Description.module.scss";
 
-export default function () {
+export default function Description() {
   return (
     <section className={styles.description}>
       <h1>{process.env.NEXT_PUBLIC_PAGE_TITLE}</h1>
