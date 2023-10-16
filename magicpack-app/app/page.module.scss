@@ -17,6 +17,18 @@
     }
   }
 
+  li {
+    list-style: none;
+  }
+
+  a {
+    color: #fff;
+    transition: all 80ms linear;
+    &:hover {
+      color: #aaa;
+    }
+  }
+
   @media (max-width: $layout_breakpoint_2) {
     margin: 35px 40px;
   }
