@@ -32,6 +32,8 @@ In order to save electricity costs, you can deploy MagicPack and offer your empl
 
 The computers.json file can be edited both before creating the container or as the container is running. In the docker compose file it is configured as a bind mount. Editing it on the docker host file system means editing the file on the container. There is no need to stop the container when adding an entry.
 
+To start, I suggest using the existing computers.json and simply replacing the placeholder values with your actual info.
+
 The file structure requires { } around the actual entries which look like this:
 
     "john-doe": {
