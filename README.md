@@ -66,11 +66,11 @@ The file structure requires { } around the actual entries which look like this:
 
 "computer.location" is a display name for the location of the computer.
 
-"name" is a display name for the actual computer name.
+"computer.name" is a display name for the actual computer name.
 
-"mac" is the mac address of the NIC that the magic packet should be sent to. You need to follow this syntax: **A1:B2:C3:4D:5E:6F**.
+"computer.mac" is the mac address of the NIC that the magic packet should be sent to. You need to follow this syntax: **A1:B2:C3:4D:5E:6F**.
 
-"dns" is the dns name or ip address of the computer which is used for ping.
+"computer.dns" is the dns name or ip address of the computer which is used for ping.
 
 ## .env
 
