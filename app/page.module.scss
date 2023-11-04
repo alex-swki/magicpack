@@ -22,10 +22,10 @@
   }
 
   a {
-    color: #fff;
+    color: $app_color_full;
     transition: all 80ms linear;
     &:hover {
-      color: #aaa;
+      color: $app_color_06;
     }
   }
 
