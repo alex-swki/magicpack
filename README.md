@@ -10,25 +10,33 @@ MagicPack is a web-based Wake-On-Lan tool intended for use by teams or companies
 Your employees connect to their company computer from their home via a VPN & RDP. In order to do that, they leave their company computer running 24/7 when they are working from home.
 In order to save electricity costs, you can deploy MagicPack and offer your employees a solution to turn on their company computer from home via their individual link.
 
-## Host MagicPack using Docker
+## Deploy MagicPack using Docker
 
-In order for the MagicPack docker container to be able to send magic packets in your network the Docker network-mode "host" needs to be working. This is currently only the case on Linux systems.
+### Requirements
+- Linux system (Docker network_mode:_host Support)
+- Docker installed
+
+### Deployment
 
 1. Clone this git repository
 
-   git clone https://github.com/alex-swki/magicpack
+``git clone https://github.com/alex-swki/magicpack``
 
-2. cd into the repository and change environment variables
+2. cd into the repository and change environment variables (explained below)
 
-   cd magicpack && nano .env
+``cd magicpack && nano .env``
 
-3. Add computers
+3. Add computers (can also be done later)
 
-   nano computers.json
+``nano computers.json``
 
 4. Start the docker container via docker compose
 
-   docker compose up -d --build
+``docker compose up -d``
+
+> **INFO:** If you would like to apply changes of the .env file after creating the container, use the following command
+
+``docker compose restart``
 
 ## computers.json
 
@@ -66,8 +74,7 @@ The file structure requires { } around the actual entries which look like this:
 
 ## .env
 
-**All .env values need to be set before building the image (running the docker compose command)
-I recommend _docker compose down -v_ if you have deployed MagicPack before in order to delete all previous data**
+> Change the environment variables accordingly before starting the docker container.
 
 _NEXT_PUBLIC_URL="http://localhost:3000"_
 Set this to the URL which users will access MagicPack with
