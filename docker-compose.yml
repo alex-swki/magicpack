@@ -1,9 +1,9 @@
 version: "3.3"
 services:
   magicpack:
-    build: .
     network_mode: host
     restart: always
     container_name: magicpack
     volumes:
       - ./computers.json:/magicpack/computers.json
+      - ./env:/.env.local
