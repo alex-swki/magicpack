@@ -7,4 +7,4 @@ services:
     container_name: magicpack
     volumes:
       - ./computers.json:/magicpack/computers.json
-      - ./env:/.env.local
+      - ./.env:/magicpack/.env.local
