@@ -1,6 +1,7 @@
 version: "3.3"
 services:
   magicpack:
+    image: alexswki/magicpack
     network_mode: host
     restart: always
     container_name: magicpack
